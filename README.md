@@ -1,11 +1,12 @@
 
 * Database creation
 ###users テーブル
-|column               |type    |
-|:---                 |------  |
-|name                 |string  |
-|devise use           |text    |
-|devse use            |text    |
+|column|type|
+|:---|:---|
+|name|string|
+
+- use devise
+
 ### アソシエーション
 + has_many group_users
 + has_many groups through group_users
