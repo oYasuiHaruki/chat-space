@@ -1,10 +1,9 @@
 
 * Database creation
 ###users テーブル
-|column|type|
-|:---|:---|
-|name|string|
-
+|column               |type    |
+|:---                 |------  |
+|name                  |string|
 - use devise
 
 ### アソシエーション
