@@ -2,11 +2,10 @@
 * Database creation
 ###users テーブル
 |column               |type    |
-|:-----               |-----   |
+|:---                 |------  |
 |name                 |string  |
 |devise use           |text    |
 |devise use           |text    |
-
 ### アソシエーション
 + has_many group_users
 + has_many groups through group_users
