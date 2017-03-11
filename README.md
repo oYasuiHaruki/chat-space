@@ -6,6 +6,7 @@
 |:---                 |------  |
 |name                  |string|
 
+
 - use devise
 
 ### アソシエーション
