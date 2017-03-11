@@ -1,15 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
 
 * Database creation
 ###users テーブル
@@ -27,11 +15,11 @@ Things you may want to cover:
 
 ### messagesテーブル
 |column               |type    |
-|:--|                 |------  |
-|text|                |text    |
-|image|               |string  |
-|user_id|             |integer |
-|group_id|            |integer |
+|:---                 |------  |
+|body                 |text    |
+|image                |string  |
+|user_id              |integer |
+|group_id             |integer |
 
 ### アソシエーション
 + belongs_to user
@@ -49,10 +37,10 @@ Things you may want to cover:
 + has_many users through group_users
 
 ###group_user テーブル
-|column                |type   |
-|:--                   |--     |
-|group_id              |integer|
-|user_id               |integer|
+|column                |type  |
+|:--                   |----  |
+|group_id              |integer |
+|user_id               |integer |
 
 ### アソシエーション 中間テーブル
 + belongs_to user
