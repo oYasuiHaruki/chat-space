@@ -1,35 +1,16 @@
-.notice{
+.flash {
   width: auto;
   height: 30px;
+  text-align: center;
+  color: white;
   margin: auto 0;
+  .notice{
   background-color: blue;
-  text-align: center;
-  color: white;
   padding: 5px 0 5px;
-}
+  }
 
-.alert{
-  width: auto;
-  height: 30px;
-  margin: auto 0;
+  .alert{
   background-color: red;
-  text-align: center;
-  color: white;
   padding: 5px 0 5px;
+  }
 }
-
-// .flash {
-//   width: auto;
-//   height: 30px;
-//   text-align: center;
-// }
-
-//   .notice {
-//     background-color: blue;
-//     color: white;
-//   }
-
-//   .alert {
-//     background-color: red;
-//     color: white;
-//   }
