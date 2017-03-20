@@ -1,0 +1,20 @@
+@mixin flash() {
+  width: auto;
+  height: 30px;
+  text-align: center;
+  color: white;
+  margin: auto 0;
+}
+
+.notice{
+  @include flash();
+  background-color: blue;
+  padding: 5px 0 5px;
+}
+
+.alert{
+  @include flash();
+  background-color: red;
+  padding: 5px 0 5px;
+}
+
