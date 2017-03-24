@@ -1,0 +1,47 @@
+.content
+  .content__left
+    .content__left__top
+      .name
+        yasui haruki
+      = fa_icon 'cog'
+      = fa_icon 'pencil-square-o'
+    .content__left__bottom
+      .chat-group
+        .group-name
+          aaaaaaaaaaaaa
+        .comment
+          まだメッセージがありません
+      .chat-group
+        .group-name
+          bbbbbbbbbbbbb
+        .comment
+          まだメッセージがありません
+  .content__right
+    .content__right__top
+      .group-name2
+        sample
+      %form{action: :"/users/edit", method: :"get"}
+        %input{type: :"submit", value: :"Edit", class: :"edit"}
+      .members
+        Members: yasui haruki
+    .content__right__center
+      .chat
+        .name
+          yasui haruki
+        .time
+          2017/06/14
+        .comment
+          楽しい
+      .chat
+        .name
+          yasui haruki
+        .time
+          2017/06/14
+        .comment
+          楽しい
+    .content__right__bottom
+      %form{action: :"/users/edit", method: :"get"}
+        %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
+        %input{type: :"submit", value: :"Send", class: :"send"}
+      = fa_icon 'file-photo-o'
+

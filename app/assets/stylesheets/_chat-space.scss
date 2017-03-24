@@ -1,0 +1,200 @@
+.content {
+  position: relative;
+  min-width: 600px;
+
+  .content__left {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 300px;
+
+    .content__left__top {
+      position: relative;
+      width: auto;
+      height: 100px;
+      background-color: #253141;
+
+      .name {
+        position: absolute;
+        top: 42px;
+        left: 42px;
+        text-align: left;
+        font-size: 16px;
+        color: #FFFFFF;
+      }
+
+      .fa.fa-cog {
+        position: absolute;
+        top: 42px;
+        right: 20px;
+        font-size: 20px;
+        color: white;
+      }
+
+      .fa.fa-pencil-square-o {
+        position: absolute;
+        top: 42px;
+        right: 40px;
+        font-size: 20px;
+        color: white;
+      }
+
+    }
+
+    .content__left__bottom {
+      min-height: calc(100vh - 100px);
+      width: 100%;
+      background-color: #2f3e51;
+
+      .chat-group {
+        height: 31px;
+        padding: 20px 20px 40px 20px;
+
+        .group-name {
+        font-size: 15px;
+        color: #FFFFFF;
+        }
+
+        .comment {
+        position: absolute;
+        font-size: 11px;
+        color: #FFFFFF;
+        padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  .content__right {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    max-width: 100vw;
+    min-width: 300px;
+    min-height: 100vh;
+
+    .content__right__top {
+      height: 99px;
+      width: 100%;
+      background-color: white;
+      border-bottom-color: #eeeeee ;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      position: relative;
+
+      .group-name2 {
+        font-size: 20px;
+        position: absolute;
+        top: 35px;
+        left: 40px;
+        bottom: 15px;
+        color: #333333;
+      }
+
+      .edit {
+        position: absolute;
+        top: 28px;
+        right: 40px;
+        height: 40px;
+        width: 70px;
+        text-align: center;
+        background-color: white;
+        border-width: 2px;
+        border-color: #38aef0;
+        border-style: solid;
+        color: #38aef0;
+      }
+
+      .members {
+        position: absolute;
+        top: 70px;
+        left: 40px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+
+    .content__right__center {
+      width: 100%;
+      background-color: #434A54;
+      min-height:calc(100vh - 90px - 100px - 46px) ;
+      padding-top: 46px;
+      background-color: #fffffc;
+
+      .chat {
+        height: 80px;
+        position: relative;
+
+        .name {
+          padding-left: 40px;
+          padding-right: 10px;
+          font-size: 16px;
+          display: inline;
+          color: #434A54;
+          font-weight: bold;
+        }
+
+        .time {
+          font-size: 12px;
+          color: #999999;
+          display: inline;
+        }
+
+        .comment {
+          position: absolute;
+          top: 36px;
+          left: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .content__right__bottom {
+      min-width: 500px;
+      width: 100%;
+      height: 90px;
+      background-color: #dddddd;
+      position: relative;
+
+      .type {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        width: 80%;
+        min-width: 300px;
+        height: 35px;
+        background-color: white;
+        padding-top: 15px;
+        padding-left: 10px;
+        font-size: 16px;
+      }
+
+      .fa.fa-file-photo-o {
+        position: absolute;
+        top: 37px;
+        left: calc(80% + 30px);
+        font-size: 20px;
+      }
+
+
+      .send {
+        position: absolute;
+        width: 10%;
+        top: 20px;
+        left: calc(80% + 65px);
+        right: 40px;
+        background-color: #38aef0;
+        height: 50px;
+        // padding-right: 40px;
+        border-style: none;
+        text-align: center;
+        color: white;
+      }
+
+      // input:-moz-placeholder {
+      //   marign: auto;
+      // }
+    }
+  }
+}
