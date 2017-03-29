@@ -1,47 +1,42 @@
-.content
-  .content__left
-    .content__left__top
-      .name
-        yasui haruki
-      = fa_icon 'cog'
+.group
+  .group__header
+    .group__header__name
+      yasui haruki
+    .group__header__icon
       = fa_icon 'pencil-square-o'
-    .content__left__bottom
-      .chat-group
-        .group-name
-          aaaaaaaaaaaaa
-        .comment
-          まだメッセージがありません
-      .chat-group
-        .group-name
-          bbbbbbbbbbbbb
-        .comment
-          まだメッセージがありません
-  .content__right
-    .content__right__top
-      .group-name2
-        sample
-      %form{action: :"/users/edit", method: :"get"}
-        %input{type: :"submit", value: :"Edit", class: :"edit"}
-      .members
-        Members: yasui haruki
-    .content__right__center
-      .chat
-        .name
-          yasui haruki
-        .time
-          2017/06/14
-        .comment
-          楽しい
-      .chat
-        .name
-          yasui haruki
-        .time
-          2017/06/14
-        .comment
-          楽しい
-    .content__right__bottom
-      %form{action: :"/users/edit", method: :"get"}
-        %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
-        %input{type: :"submit", value: :"Send", class: :"send"}
-      = fa_icon 'file-photo-o'
-
+      = fa_icon 'cog'
+  .group__user
+    .group__user__list--name
+      野球
+    .group__user__list--message
+      まだメッセージがありません
+    .group__user__list--name
+      Speee
+    .group__user__list--message
+      まだメッセージがありません
+.message
+  .message__header
+    .message__header__name
+      sample
+    = link_to 'Edit','', class: 'edit'
+    .message__header__members
+      Members: yasui haruki
+  .message__body
+    .message__body__chat
+      .message__body__chat__name
+        yasui haruki
+      .message__body__chat__time
+        2017/06/14
+      .message__body__chat__comment
+        楽しい
+    .message__body__chat
+      .message__body__chat__name
+        yasui haruki
+      .message__body__chat__time
+        2017/06/14
+      .message__body__chat__comment
+        楽しい
+  .message__footer
+    %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
+    %input{type: :"submit", value: :"Send", class: :"send"}
+    = fa_icon 'file-photo-o'
