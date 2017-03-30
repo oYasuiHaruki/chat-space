@@ -1,6 +1,3 @@
-$mainColor: #FFFFFF;
-$subcolor: #38aef0;
-
 body {
   display: flex;
 
@@ -10,7 +7,7 @@ body {
     &__header {
       width: auto;
       height: 15%;
-      background-color: #253141;
+      background-color: $dark__navy;
 
       &__name {
         display: inline-block;
@@ -18,7 +15,7 @@ body {
         padding: 20% 0 0 20px;
         font-size: 20px;
         font-weight: bold;
-        color: $mainColor;
+        color: $white--main;
       }
 
       &__icon {
@@ -27,7 +24,7 @@ body {
 
         .fa {
           width: 20px;
-          color: $mainColor;
+          color: $white--main;
           font-size: 20px;
         }
       }
@@ -36,8 +33,8 @@ body {
     &__user {
       width: 100%;
       min-height: calc(100vh - 15%);
-      background-color: #2f3e51;
-      color: $mainColor;
+      background-color: $navy;
+      color: $white--main;
 
       &__list--name {
         height: 23px;
@@ -59,15 +56,15 @@ body {
     &__header {
       width: 100%;
       height: 15%;
-      background-color: $mainColor;
-      border-bottom: 1px solid #eeeeee;
+      background-color: $white--main;
+      border-bottom: 1px solid $border-color;
       position: relative;
 
       &__name {
         font-size: 20px;
         padding: 35px 0 0 40px;
         display: inline-block;
-        color: #333333;
+        color: $black--font;
       }
 
       .edit {
@@ -75,9 +72,9 @@ body {
         top: 28px;
         right: 40px;
         text-align: center;
-        background-color: $mainColor;
-        border: 2px solid $subcolor;
-        color: $subcolor;
+        background-color: $white--main;
+        border: 2px solid $light__blue;
+        color: $light__blue;
         display: inline-block;
         height: 20px;
         padding: 10px 20px 10px;
@@ -87,7 +84,7 @@ body {
       &__members {
         padding: 15px 0 0 40px;
         font-size: 12px;
-        color: #999999;
+        color: $light__black--font;
       }
     }
 
@@ -95,7 +92,7 @@ body {
       width: 100%;
       min-height:calc(100vh - 15% - 136px) ;
       padding-top: 46px;
-      background-color: #fffffc;
+      background-color: $cream__white;
 
       &__chat {
         height: 80px;
@@ -105,13 +102,13 @@ body {
           padding:0 10px 0 40px;
           font-size: 16px;
           display: inline;
-          color: #434A54;
+          color: $black--name-font;
           font-weight: bold;
         }
 
         &__time {
           font-size: 12px;
-          color: #999999;
+          color: $light__black--font;
           display: inline;
         }
 
@@ -126,7 +123,7 @@ body {
       min-width: 500px;
       width: 100%;
       height: 90px;
-      background-color: #dddddd;
+      background-color: $light__gray;
       position: relative;
 
       .type {
@@ -137,9 +134,8 @@ body {
         width: calc(100% - 210px);
         min-width: 300px;
         height: 35px;
-        background-color: white;
-        padding-top: 15px;
-        padding-left: 10px;
+        background-color: $white__main;
+        padding: 15px 0 0 10px;
         font-size: 16px;
       }
 
@@ -157,11 +153,11 @@ body {
         width: 100px;
         top: 20px;
         right: 40px;
-        background-color: $subcolor;
+        background-color: $light__blue;
         height: 50px;
         border-style: none;
         text-align: center;
-        color: white;
+        color: $white__main;
       }
     }
   }
