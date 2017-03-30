@@ -1,0 +1,164 @@
+body {
+  display: flex;
+
+  .group {
+    width: 300px;
+
+    &__header {
+      width: auto;
+      height: 15%;
+      background-color: $dark__navy;
+
+      &__name {
+        display: inline-block;
+        text-align: left;
+        padding: 20% 0 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $white--main;
+      }
+
+      &__icon {
+        padding-left: 20%;
+        display: inline-block;
+
+        .fa {
+          width: 20px;
+          color: $white--main;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__user {
+      width: 100%;
+      min-height: calc(100vh - 15%);
+      background-color: $navy;
+      color: $white--main;
+
+      &__list--name {
+        height: 23px;
+        padding: 20px 0 0 20px;
+      }
+
+      &__list--message {
+      height: 17px;
+      padding: 5px 0 40px 20px;
+      font-size: 11px;
+      }
+    }
+  }
+
+  .message {
+    width: 100%;
+    min-height: 100vh;
+
+    &__header {
+      width: 100%;
+      height: 15%;
+      background-color: $white--main;
+      border-bottom: 1px solid $border-color;
+      position: relative;
+
+      &__name {
+        font-size: 20px;
+        padding: 35px 0 0 40px;
+        display: inline-block;
+        color: $black--font;
+      }
+
+      .edit {
+        position: absolute;
+        top: 28px;
+        right: 40px;
+        text-align: center;
+        background-color: $white--main;
+        border: 2px solid $light__blue;
+        color: $light__blue;
+        display: inline-block;
+        height: 20px;
+        padding: 10px 20px 10px;
+        text-decoration: none;
+      }
+
+      &__members {
+        padding: 15px 0 0 40px;
+        font-size: 12px;
+        color: $light__black--font;
+      }
+    }
+
+    &__body {
+      width: 100%;
+      min-height:calc(100vh - 15% - 136px) ;
+      padding-top: 46px;
+      background-color: $cream__white;
+
+      &__chat {
+        height: 80px;
+        position: relative;
+
+        &__name {
+          padding:0 10px 0 40px;
+          font-size: 16px;
+          display: inline;
+          color: $black--name-font;
+          font-weight: bold;
+        }
+
+        &__time {
+          font-size: 12px;
+          color: $light__black--font;
+          display: inline;
+        }
+
+        &__comment {
+          padding: 10px 0 0 40px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__footer {
+      min-width: 500px;
+      width: 100%;
+      height: 90px;
+      background-color: $light__gray;
+      position: relative;
+
+      .type {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        right: 160px;
+        width: calc(100% - 210px);
+        min-width: 300px;
+        height: 35px;
+        background-color: $white__main;
+        padding: 15px 0 0 10px;
+        font-size: 16px;
+      }
+
+      .fa.fa-file-photo-o {
+        position: absolute;
+        top: 37px;
+        right: 170px;
+        font-size: 20px;
+        width: 20px;
+      }
+
+
+      .send {
+        position: absolute;
+        width: 100px;
+        top: 20px;
+        right: 40px;
+        background-color: $light__blue;
+        height: 50px;
+        border-style: none;
+        text-align: center;
+        color: $white__main;
+      }
+    }
+  }
+}
