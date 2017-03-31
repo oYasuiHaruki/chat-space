@@ -4,7 +4,8 @@
       .group__header__name
         yasui haruki
       .group__header__icon
-        = fa_icon 'pencil-square-o'
+        = link_to '/group/new' do
+          = fa_icon 'pencil-square-o'
         = fa_icon 'cog'
     .group__user
       .group__user__list--name
