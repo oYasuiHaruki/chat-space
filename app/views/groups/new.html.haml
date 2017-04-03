@@ -1,0 +1,23 @@
+.chat-group-form
+  %h1 新規チャットグループ
+  =form_for @group do |f|
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        %label.chat-group-form__label{ for: :"group_name"} グループ
+      .chat-group-form__field--right
+        %input#group_name.chat-group-form__input{ name: :"group[name]", placeholder:  :グループ名を入力してください, type: :text }
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--right
+        #user-search-result
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        %label.chat-group-form__label チャットメンバー
+      .chat-group-form__field--right
+        #chat-group-users
+          #chat-group-user-22.chat-group-user
+            = collection_check_boxes( :group, :user_ids, User.all, :id, :name ) do |b|
+              = b.label { b.check_box + b.text }
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+      .chat-group-form__field--right
+        %input.chat-group-form__action-btn{ "data-disable-with": :"Save", name: :"commit", type: :"submit", value: :"Save" }

@@ -4,23 +4,20 @@
       .group__header__name
         yasui haruki
       .group__header__icon
-        = link_to '/group/new' do
+        = link_to "#{new_group_path}" do
           = fa_icon 'pencil-square-o'
         = fa_icon 'cog'
     .group__user
-      .group__user__list--name
-        野球
-      .group__user__list--message
-        まだメッセージがありません
-      .group__user__list--name
-        Speee
-      .group__user__list--message
-        まだメッセージがありません
+      - @group.each do |group|
+        .group__user__list__name
+          = simple_format(group.name)
+        .group__user__list--message
+          まだメッセージがありません
   .message
     .message__header
       .message__header__name
         sample
-      = link_to 'Edit','#', class: 'edit'
+      = link_to 'Edit',"groups/1/edit", class: 'edit'
       .message__header__members
         Members: yasui haruki
     .message__body
