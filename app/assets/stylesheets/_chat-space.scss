@@ -3,8 +3,6 @@
 
   .group {
     width: 300px;
-    overflow-x: hidden;
-    overflow-y: hidden;
 
     &__header {
       width: 300px;
@@ -24,10 +22,30 @@
         padding-left: 20%;
         display: inline-block;
 
+        .icon1 {
+          display: inline-block;
+        }
+
+        .icon1:hover {
+          background-color: $white--main;
+        }
+
+        .icon2 {
+          display: inline-block;
+        }
+
+        .icon2:hover{
+          background-color: $white--main;
+        }
+
         .fa {
           width: 20px;
           color: $white--main;
           font-size: 20px;
+        }
+
+        .fa:hover {
+          color: $dark__navy;
         }
       }
     }
@@ -40,25 +58,37 @@
       color: $white--main;
       position: absolute;
       overflow-y: scroll;
-      overflow-y: scroll;
+      overflow-x: hidden;
 
-      &__list--name {
-        height: 23px;
-        padding: 20px 0 0 20px;
-        flex-direction:         column;
+      &__list{
+        text-decoration: none;
+        color: $white--main;
+        display: block;
+        border:1px solid;
+        border-color: $black;
+
+        &--name {
+          height: 23px;
+          padding: 20px 0 0 20px;
+          border-style: none;
+        }
+
+        &--message {
+          height: 17px;
+          padding: 5px 0 40px 20px;
+          font-size: 11px;
+        }
       }
 
-      &__list--message {
-      height: 17px;
-      padding: 5px 0 40px 20px;
-      font-size: 11px;
-      flex-direction:         column;
+      &__list:hover {
+        background: $white--main;
+        color: $dark__navy;
       }
     }
   }
 
   .message {
-    width: 100%;
+    width: calc(100% - 300px);
     min-height: 100vh;
 
     &__header {
@@ -71,7 +101,6 @@
       &__name {
         font-size: 20px;
         padding: 35px 0 0 40px;
-        display: inline-block;
         color: $black--font;
       }
 
@@ -83,10 +112,14 @@
         background-color: $white--main;
         border: 2px solid $light__blue;
         color: $light__blue;
-        display: inline-block;
         height: 20px;
         padding: 10px 20px 10px;
         text-decoration: none;
+      }
+
+      .edit:hover {
+        background-color: $light__blue;
+        color: $white--main;
       }
 
       &__members {
@@ -104,7 +137,6 @@
 
       &__chat {
         height: 80px;
-        position: relative;
 
         &__name {
           padding:0 10px 0 40px;
@@ -167,6 +199,13 @@
         text-align: center;
         color: $white__main;
       }
+
+      .send:hover {
+        background-color: $white__main;
+        color: $light__blue;
+      }
     }
   }
 }
+
+
