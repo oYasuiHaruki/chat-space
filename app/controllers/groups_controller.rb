@@ -5,11 +5,11 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(1)
+    @group = Group.find(params[:id])
   end
 
   def update
-    group = Group.find(1)
+    group = Group.find(params[:id])
     group.update(group_params)
     redirect_to("/")
   end

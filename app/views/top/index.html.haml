@@ -2,40 +2,17 @@
   .group
     .group__header
       .group__header__name
-        yasui haruki
+        #{current_user.name}
       .group__header__icon
-        = link_to "#{new_group_path}" do
+        = link_to "#{new_group_path}", class: "icon1" do
           = fa_icon 'pencil-square-o'
-        = fa_icon 'cog'
+        =link_to "#{edit_user_registration_path(current_user)}", class: "icon2" do
+          = fa_icon 'cog'
     .group__user
       - @group.each do |group|
-        .group__user__list__name
-          = simple_format(group.name)
-        .group__user__list--message
-          まだメッセージがありません
+        = link_to "#{group_messages_path(group)}", class: "group__user__list" do
+          .group__user__list--name
+            = simple_format(group.name)
+          .group__user__list--message
+            まだメッセージがありません
   .message
-    .message__header
-      .message__header__name
-        sample
-      = link_to 'Edit',"groups/1/edit", class: 'edit'
-      .message__header__members
-        Members: yasui haruki
-    .message__body
-      .message__body__chat
-        .message__body__chat__name
-          yasui haruki
-        .message__body__chat__time
-          2017/06/14
-        .message__body__chat__comment
-          楽しい
-      .message__body__chat
-        .message__body__chat__name
-          yasui haruki
-        .message__body__chat__time
-          2017/06/14
-        .message__body__chat__comment
-          楽しい
-    .message__footer
-      %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
-      %input{type: :"submit", value: :"Send", class: :"send"}
-      = fa_icon 'file-photo-o'
