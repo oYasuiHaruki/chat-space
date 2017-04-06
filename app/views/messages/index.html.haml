@@ -9,21 +9,17 @@
         = link_to "#{edit_user_registration_path(current_user)}" , class: "icon2" do
           = fa_icon 'cog'
     .group__user
-      - @group.each do |group|
-        = link_to "#{group_messages_path(group)}", class: "group__user__list" do
-          .group__user__list--name
-            = simple_format(group.name)
-          .group__user__list--message
-            まだメッセージがありません
+      - @group_users.each do |g|
+        = render partial: "layouts/group__user", locals: {g: g }
   .message
     .message__header
       .message__header__name
-        #{@current_group.name}
+        = @current_group.name
       = link_to 'Edit',"#{edit_group_path(@current_group)}", class: 'edit'
       .message__header__members
         member:
-        - @user.each do |users|
-          #{users.user.name},
+        - @users.each do |u|
+          = u.user.name
     .message__body
       .message__body__chat
         .message__body__chat__name
