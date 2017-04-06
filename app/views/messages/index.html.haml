@@ -4,9 +4,9 @@
       .group__header__name
         = current_user.name
       .group__header__icon
-        = link_to "#{new_group_path}" , class: "icon1" do
+        = link_to (new_group_path) , class: "icon1" do
           = fa_icon 'pencil-square-o'
-        = link_to "#{edit_user_registration_path(current_user)}" , class: "icon2" do
+        = link_to (edit_user_registration_path(current_user)) , class: "icon2" do
           = fa_icon 'cog'
     .group__user
       - @group_users.each do |g|
@@ -15,7 +15,7 @@
     .message__header
       .message__header__name
         = @current_group.name
-      = link_to 'Edit',"#{edit_group_path(@current_group)}", class: 'edit'
+      = link_to 'Edit',(edit_group_path(@current_group)), class: 'edit'
       .message__header__members
         member:
         - @users.each do |u|
