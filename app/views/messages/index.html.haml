@@ -2,7 +2,7 @@
   .group
     .group__header
       .group__header__name
-        #{current_user.name}
+        = current_user.name
       .group__header__icon
         = link_to "#{new_group_path}" , class: "icon1" do
           = fa_icon 'pencil-square-o'
