@@ -5,8 +5,14 @@ class GroupsController < ApplicationController
   end
 
   def create
-    Group.create(group_params)
-    redirect_to("#{root_path}")
+    @group = Group.create(group_params)
+    if @group.valid? == true
+      redirect_to(root_path)
+    else
+      flash[:alert] = "グループ名を入力してください"
+      redirect_to(new_group_path)
+    end
+
   end
 
   def edit
@@ -16,7 +22,7 @@ class GroupsController < ApplicationController
   def update
     group = Group.find(params[:id])
     group.update(group_params)
-    redirect_to("#{root_path}")
+    redirect_to(root_path)
   end
 
   private

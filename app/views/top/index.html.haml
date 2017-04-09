@@ -9,6 +9,6 @@
         =link_to (edit_user_registration_path(current_user)), class: "icon2" do
           = fa_icon 'cog'
     .group__user
-      - @group_users.each do |g|
+      - @groups.each do |g|
         = render partial: "layouts/group__user", locals: {g: g }
   .message
