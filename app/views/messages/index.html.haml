@@ -1,26 +1,14 @@
 .wrapper
-  .group
-    .group__header
-      .group__header__name
-        = current_user.name
-      .group__header__icon
-        = link_to (new_group_path) , class: "icon1" do
-          = fa_icon 'pencil-square-o'
-        = link_to (edit_user_registration_path(current_user)) , class: "icon2" do
-          = fa_icon 'cog'
-    .group__user
-      - @groups.each do |g|
-        = render partial: "layouts/group__user", locals: {g: g }
-
-  .message
+  .left-content
+    = render partial: "groups/index"
+  .right-content
     .message__header
       .message__header__name
         = @group.name
-      = link_to 'Edit',(edit_group_path(@group)), class: 'edit'
+      = link_to 'Edit', edit_group_path(@group), class: 'edit'
       .message__header__members
         member:
-        - @users.each do |u|
-          = u.name
+        = @users.pluck(:name).join(" ")
     .message__body
       .message__body__chat
         .message__body__chat__name
@@ -40,3 +28,4 @@
       %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
       %input{type: :"submit", value: :"Send", class: :"send"}
       = fa_icon 'file-photo-o'
+

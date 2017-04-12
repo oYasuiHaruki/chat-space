@@ -3,8 +3,8 @@
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: $white--main;
+    border: 1px solid $user-border-color;
     border-radius: 5px;
 
     .account-page__inner--left, .account-page__inner--right {
@@ -30,7 +30,7 @@
         display: block;
         width: 60px;
         margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
+        border-bottom: 1px solid $light__blue;
       }
     }
 
@@ -42,8 +42,8 @@
 
     .btn {
       margin-top: 20px;
-      color: #fff;
-      background-color: #ccc;
+      color: $white--main;
+      background-color: $light__gray;
       font-size: 14px;
     }
   }
@@ -85,8 +85,8 @@
   input[type='submit'] {
     float: left;
     margin-top: 20px;
-    color: #fff;
-    background-color: #38aef0;
+    color: $light__gray;
+    background-color: $light__blue;
   }
 
   .field-label {
@@ -109,7 +109,7 @@
         right: 0;
         bottom: 0;
         width: 5px;
-        background-color: #d65f4c;
+        background-color: $red;
       }
     }
   }
@@ -118,12 +118,12 @@
 #error_explanation {
   margin: 20px 0;
   padding: 20px 30px;
-  border: 1px solid #ddd;
+  border: 1px solid $light__gray;
   border-radius: 2px;
 
   h2 {
     margin-bottom: 10px;
-    color: #d65f4c;
+    color: $red;
     font-size: 14px;
   }
 

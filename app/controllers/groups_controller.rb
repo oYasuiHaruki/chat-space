@@ -5,12 +5,13 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.create(group_params)
-    if @group.valid? == true
+    @group = Group.new(group_params)
+    if @group.save
+      flash[:notice] = "グループが作成されました"
       redirect_to(root_path)
     else
       flash[:alert] = "グループ名を入力してください"
-      redirect_to(new_group_path)
+      render action: :new
     end
 
   end
@@ -20,9 +21,14 @@ class GroupsController < ApplicationController
   end
 
   def update
-    group = Group.find(params[:id])
-    group.update(group_params)
-    redirect_to(root_path)
+    @group = Group.find(params[:id])
+    if @group.update(group_params)
+      flash[:notice] = "グループが編集されました"
+      redirect_to(root_path)
+    else
+      flash[:alert] = "グループ名を入力してください"
+      render action: :edit
+    end
   end
 
   private
