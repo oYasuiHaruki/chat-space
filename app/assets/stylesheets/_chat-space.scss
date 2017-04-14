@@ -18,23 +18,15 @@
         color: $white--main;
       }
 
-      &__icon {
+      &__icons {
         padding-left: 20%;
         display: inline-block;
 
-        .pencil-square-o {
+        .icon {
           display: inline-block;
         }
 
-        .pencil-square-o:hover {
-          background-color: $white--main;
-        }
-
-        .cog {
-          display: inline-block;
-        }
-
-        .cog:hover{
+        .icon:hover {
           background-color: $white--main;
         }
 
@@ -207,5 +199,3 @@
     }
   }
 }
-
-
