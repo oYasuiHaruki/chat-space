@@ -24,20 +24,20 @@
 
         .icon {
           display: inline-block;
-        }
 
-        .icon:hover {
-          background-color: $white--main;
+          &:hover {
+            background-color: $white--main;
+          }
         }
 
         .fa {
           width: 20px;
           color: $white--main;
           font-size: 20px;
-        }
 
-        .fa:hover {
-          color: $dark__navy;
+          &:hover {
+            color: $dark__navy;
+          }
         }
       }
     }
@@ -70,11 +70,11 @@
           padding: 5px 0 40px 20px;
           font-size: 11px;
         }
-      }
 
-      &__list:hover {
-        background: $white--main;
-        color: $dark__navy;
+        &:hover {
+          background: $white--main;
+          color: $dark__navy;
+        }
       }
     }
   }
@@ -107,11 +107,11 @@
         height: 20px;
         padding: 10px 20px 10px;
         text-decoration: none;
-      }
 
-      .edit:hover {
-        background-color: $light__blue;
-        color: $white--main;
+        &:hover {
+          background-color: $light__blue;
+          color: $white--main;
+        }
       }
 
       &__members {
@@ -190,11 +190,11 @@
         border-style: none;
         text-align: center;
         color: $white__main;
-      }
 
-      .send:hover {
-        background-color: $white__main;
-        color: $light__blue;
+        &:hover {
+          background-color: $white__main;
+          color: $light__blue;
+        }
       }
     }
   }
