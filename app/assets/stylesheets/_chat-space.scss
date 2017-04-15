@@ -1,59 +1,89 @@
-body {
+.wrapper {
   display: flex;
 
-  .group {
+  .left-content {
     width: 300px;
 
-    &__header {
-      width: auto;
+    .group__header {
+      width: 300px;
       height: 15%;
       background-color: $dark__navy;
 
       &__name {
         display: inline-block;
         text-align: left;
-        padding: 20% 0 0 20px;
-        font-size: 20px;
+        padding: 20% 0 0 25px;
+        font-size: 25px;
         font-weight: bold;
         color: $white--main;
       }
 
-      &__icon {
+      &__icons {
         padding-left: 20%;
         display: inline-block;
+
+        .icon {
+          display: inline-block;
+
+          &:hover {
+            background-color: $white--main;
+          }
+        }
 
         .fa {
           width: 20px;
           color: $white--main;
           font-size: 20px;
+
+          &:hover {
+            color: $dark__navy;
+          }
         }
       }
     }
 
-    &__user {
-      width: 100%;
+    .groups {
+      width: 300px;
+      height: 75%;
       min-height: calc(100vh - 15%);
       background-color: $navy;
       color: $white--main;
+      position: absolute;
+      overflow-y: scroll;
+      overflow-x: hidden;
 
-      &__list--name {
-        height: 23px;
-        padding: 20px 0 0 20px;
-      }
+      &__list{
+        text-decoration: none;
+        color: $white--main;
+        display: block;
+        border:1px solid;
+        border-color: $black;
 
-      &__list--message {
-      height: 17px;
-      padding: 5px 0 40px 20px;
-      font-size: 11px;
+        &--name {
+          height: 23px;
+          padding: 20px 0 0 20px;
+          border-style: none;
+        }
+
+        &--message {
+          height: 17px;
+          padding: 5px 0 40px 20px;
+          font-size: 11px;
+        }
+
+        &:hover {
+          background: $white--main;
+          color: $dark__navy;
+        }
       }
     }
   }
 
-  .message {
-    width: 100%;
+  .right-content {
+    width: calc(100% - 300px);
     min-height: 100vh;
 
-    &__header {
+    .message__header {
       width: 100%;
       height: 15%;
       background-color: $white--main;
@@ -63,7 +93,6 @@ body {
       &__name {
         font-size: 20px;
         padding: 35px 0 0 40px;
-        display: inline-block;
         color: $black--font;
       }
 
@@ -75,10 +104,14 @@ body {
         background-color: $white--main;
         border: 2px solid $light__blue;
         color: $light__blue;
-        display: inline-block;
         height: 20px;
         padding: 10px 20px 10px;
         text-decoration: none;
+
+        &:hover {
+          background-color: $light__blue;
+          color: $white--main;
+        }
       }
 
       &__members {
@@ -88,7 +121,7 @@ body {
       }
     }
 
-    &__body {
+    .message__body {
       width: 100%;
       min-height:calc(100vh - 15% - 136px) ;
       padding-top: 46px;
@@ -96,7 +129,6 @@ body {
 
       &__chat {
         height: 80px;
-        position: relative;
 
         &__name {
           padding:0 10px 0 40px;
@@ -119,7 +151,7 @@ body {
       }
     }
 
-    &__footer {
+    .message__footer {
       min-width: 500px;
       width: 100%;
       height: 90px;
@@ -158,6 +190,11 @@ body {
         border-style: none;
         text-align: center;
         color: $white__main;
+
+        &:hover {
+          background-color: $white__main;
+          color: $light__blue;
+        }
       }
     }
   }

@@ -1,0 +1,30 @@
+.wrapper
+  = render partial: "groups/left-content"
+  .right-content
+    .message__header
+      .message__header__name
+        = @group.name
+      = link_to 'Edit', edit_group_path(@group), class: 'edit'
+      .message__header__members
+        member:
+        = @users.pluck(:name).join(" ")
+    .message__body
+      .message__body__chat
+        .message__body__chat__name
+          yasui haruki
+        .message__body__chat__time
+          2017/06/14
+        .message__body__chat__comment
+          楽しい
+      .message__body__chat
+        .message__body__chat__name
+          yasui haruki
+        .message__body__chat__time
+          2017/06/14
+        .message__body__chat__comment
+          楽しい
+    .message__footer
+      %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
+      %input{type: :"submit", value: :"Send", class: :"send"}
+      = fa_icon 'file-photo-o'
+

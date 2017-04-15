@@ -8,13 +8,10 @@
 
 .notice{
   @include flash();
-  background-color: blue;
-  padding: 5px 0 5px;
+  background-color: $blue;
 }
 
 .alert{
   @include flash();
-  background-color: red;
-  padding: 5px 0 5px;
+  background-color: $red;
 }
-
