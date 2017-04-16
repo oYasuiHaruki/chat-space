@@ -24,7 +24,8 @@
         .message__body__chat__comment
           楽しい
     .message__footer
-      %textarea{name: :"type", class: :"type", placeholder: :"type a message"}
-      %input{type: :"submit", value: :"Send", class: :"send"}
-      = fa_icon 'file-photo-o'
+      = form_for ([@group,@message]) do |f|
+        = f.text_field :body, class: "type", placeholder: :"type a message"
+        = f.submit "Send", class: "send"
+        = fa_icon 'file-photo-o'
 
