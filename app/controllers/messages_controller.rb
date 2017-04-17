@@ -6,8 +6,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @post_message = Message.new(message_params)
-    if @post_message.save
+    @message = Message.new(message_params)
+    if @message.save
       flash[:notice] = "メッセージが送信されました"
       redirect_to(group_messages_path)
     else
